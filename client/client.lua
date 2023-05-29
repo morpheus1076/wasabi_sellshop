@@ -27,30 +27,34 @@ AddEventHandler('ws_sellshop:sellItem', function(data)
         data.quantity = math.floor(tonumber(input[1]))
         if data.quantity < 1 then
             lib.notify({
-                title = 'Error',
-                description = 'Please enter a valid amount!',
+                title = 'Fehler',
+				position = 'top',
+                description = 'Bitte eine richtige Anzahl eingeben!',
                 type = 'error'
             })
         else
             local done = lib.callback.await('ws_sellshop:sellItem', 100, data)
             if not done then
                 lib.notify({
-                    title = 'Error',
-                    description = 'You lacked the requested items to sell!',
+                    title = 'Fehler',
+					position = 'top',
+                    description = 'Du hast nicht genug dabei.!',
                     type = 'error'
                 })
             else
                 lib.notify({
-                    title = 'Success',
-                    description = 'You sold your goods for and profited $'..addCommas(done),
+                    title = 'Verkauf',
+					position = 'top',
+                    description = 'Alles verkauft für $'..addCommas(done),
                     type = 'success'
                 })
             end
         end
     else
         lib.notify({
-            title = 'Error',
-            description = 'Please enter a valid amount!',
+            title = 'Fehler',
+			position = 'top',
+            description = 'Bitte eine richtige Anzahl eingeben!',
             type = 'error'
         })
     end
@@ -63,9 +67,9 @@ AddEventHandler('ws_sellshop:interact', function(data)
     for i=1, #items do
         table.insert(Options, {
             title = items[i].label,
-            description = 'Sell Price: $'..items[i].price,
+            description = 'Verkaufspreis: $'..items[i].price,
             event = 'ws_sellshop:sellItem',
-            args = { item = items[i].item, price = items[i].price, currency = items[i].currency }
+            args = { item = items[i].item, price = items[i].price, currency = items[i].currency, stash = items[i].stash, society = items[i].society }
         })
     end
     lib.registerContext({
@@ -90,7 +94,7 @@ CreateThread(function()
                 {
                     event = 'ws_sellshop:interact',
                     icon = 'fas fa-hand-paper',
-                    label = 'Interact',
+                    label = 'Verkaufen',
                     store = Config.SellShops[i]
                 }
             },
