@@ -160,6 +160,8 @@ Config.SellShops = {
             { item = 'goldbarren', label = 'Goldbarren', price = 92, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
             { item = 'bleibarren', label = 'Bleibarren', price = 22, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
             { item = 'aluminiumbarren', label = 'Aluminiumbarren', price = 67, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'sand', label = 'Sand', price = 15, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'kies', label = 'Kies', price = 9, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
         }
     },
 }
