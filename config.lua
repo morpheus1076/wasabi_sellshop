@@ -33,7 +33,7 @@ Config.SellShops = {
 		stath = nil,
         blip = {
             enabled = true,
-            sprite = 500,
+            sprite = 434,
             color = 2,
             scale = 0.5
         },
@@ -53,7 +53,7 @@ Config.SellShops = {
 		stath = nil,
         blip = {
             enabled = true,
-            sprite = 500,
+            sprite = 434,
             color = 2,
             scale = 0.5
         },
@@ -70,7 +70,7 @@ Config.SellShops = {
 		stath = nil,
         blip = {
             enabled = true,
-            sprite = 365,
+            sprite = 434,
             color = 3,
             scale = 0.5
         },
@@ -89,7 +89,7 @@ Config.SellShops = {
         label = 'GWA Ankauf',
         blip = {
             enabled = true,
-            sprite = 500,
+            sprite = 434,
             color = 2,
             scale = 0.5
         },
@@ -107,7 +107,7 @@ Config.SellShops = {
         label = 'Onkel WiWang',
         blip = {
             enabled = true,
-            sprite = 500,
+            sprite = 434,
             color = 1,
             scale = 0.5
         },
@@ -123,13 +123,43 @@ Config.SellShops = {
 		stath = nil,
         blip = {
             enabled = false,
-            sprite = 500,
+            sprite = 434,
             color = 2,
             scale = 0.5
         },
         items = {
             { item = 'kokain', label = 'Kokain', price = 34, currency = 'black_money', stash = nil, society = nil },
 			{ item = 'codein', label = 'Codein', price = 54, currency = 'black_money', stash = nil, society = nil },
+        }
+    },
+    { 
+        coords = vec3(1011.3232, -2902.9314, 4.9006),
+        heading = 184.4681,
+        ped = 'A_F_Y_Business_02',
+        label = 'Export',
+        blip = {
+            enabled = true,
+            sprite = 434,
+            color = 2,
+            scale = 0.5
+        },
+        items = {
+            { item = 'stein', label = 'Stein', price = 3, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'selteneerden', label = 'Seltene Erden', price = 30, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'kohle', label = 'Kohle', price = 3, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'eisenerz', label = 'Eisenerz', price = 5, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'silbererz', label = 'Silbererz', price = 7, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'kupfererz', label = 'Kupfererz', price = 6, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'blei', label = 'Blei', price = 5, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'golderz', label = 'Golderz', price = 18, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'bauxit', label = 'Bauxit', price = 13, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'diamond', label = 'Diamant', price = 100, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'eisenbarren', label = 'Eisenbarren', price = 23, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'kupferbarren', label = 'Kupferbarren', price = 27, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'silberbarren', label = 'Silberbarren', price = 55, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'goldbarren', label = 'Goldbarren', price = 92, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'bleibarren', label = 'Bleibarren', price = 22, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
+            { item = 'aluminiumbarren', label = 'Aluminiumbarren', price = 67, currency = 'money', stash = 'exportlager', society = 'society_gwa' },
         }
     },
 }
